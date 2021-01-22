@@ -1,0 +1,29 @@
+{
+   "name": "notification-api",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@types/eslint": "^7.2.6",
+      "@types/node": "^8.0.29",
+      "@typescript-eslint/eslint-plugin": "^4.14.0",
+      "@typescript-eslint/parser": "^4.14.0",
+      "eslint": "^7.18.0",
+      "eslint-config-airbnb-base": "^14.2.1",
+      "eslint-plugin-import": "^2.22.1",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "@types/express": "^4.17.11",
+      "express": "^4.17.1",
+      "express-async-errors": "^3.1.1",
+      "mongodb": "^3.0.8",
+      "reflect-metadata": "^0.1.10",
+      "ts-node-dev": "^1.1.1",
+      "typeorm": "0.2.30"
+   },
+   "scripts": {
+      "start": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
+      "start:js": "node build/shared/infra/http/server.js"
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "type": "mongodb",
+   "name": "default",
+   "url": "mongodb+srv://leonardobalsalobre:Maximo123@cluster0.h5jnt.mongodb.net/notification-db?retryWrites=true&w=majority",
+   "useNewUrlParser": true,
+   "synchronize": true,
+   "logging": false,
+   "entities": ["src/**/*.model.{ts,js}"],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}
