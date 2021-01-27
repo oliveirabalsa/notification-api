@@ -3,9 +3,9 @@ import NotificationController from '../../controllers/notification.controller';
 
 const notificationRouter = Router();
 
-notificationRouter.get('/', NotificationController.list);
+notificationRouter.get('/', NotificationController.findAll);
 notificationRouter.post('/', NotificationController.create);
-// notificationRouter.delete('/', NotificationController.destroy());
-// notificationRouter.put('/', NotificationController.update());
+notificationRouter.delete('/:id', NotificationController.destroy);
+notificationRouter.put('/:id', NotificationController.update);
 
 export default notificationRouter;

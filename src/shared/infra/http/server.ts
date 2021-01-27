@@ -1,11 +1,11 @@
+import 'reflect-metadata';
 import express from 'express';
 import routes from './routes/index';
+import '../../container';
 
 import 'express-async-errors';
 
 import GlobalError from '../../errors/GlobalError';
-
-import '../../container';
 
 import '../typeorm';
 

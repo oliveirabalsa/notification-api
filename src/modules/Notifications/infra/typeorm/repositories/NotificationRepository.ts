@@ -15,25 +15,23 @@ class NotificationRepository {
         type,
         flow,
       });
-      await this.ormRepository.save(notification);
+      return await this.ormRepository.save(notification);
     }
 
     public async findAll() {
-      await this.ormRepository.find();
+      return await this.ormRepository.find();
     }
 
     public async update({ name, type, flow }: INotification, id: string) {
       const notification = await this.ormRepository.findOne(id);
-
-      await this.ormRepository.save({
+      return await this.ormRepository.save({
         ...notification, name, type, flow,
       });
     }
 
     public async destroy(id: string) {
       const notification = await this.ormRepository.findOne(id);
-
-      await this.ormRepository.remove(notification);
+      return await this.ormRepository.remove(notification);
     }
 }
 
