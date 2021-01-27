@@ -1,8 +1,15 @@
 import { getMongoRepository } from 'typeorm';
+import { inject, injectable } from 'tsyringe';
 import Notification from '../infra/typeorm/entities/Notification.model';
 import { INotification } from '../infra/@types/INotification';
 
+@injectable()
 class NotificationService {
+  constructor(
+  @inject('NotificationRepository')
+  private readonly notificationRepository,
+  ) {}
+
   public async list(): Promise<Notification[]> {
     const notificationRepository = getMongoRepository(Notification);
     return await notificationRepository.find();

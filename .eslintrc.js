@@ -28,6 +28,8 @@ module.exports = {
     'class-methods-use-this': 'off',
     'no-return-await': 'off',
     'no-unused-vars': 'off',
+    'no-useless-constructor': 'off',
+    'no-empty-function': 'off',
   },
   settings: {
     'import/resolver': {
